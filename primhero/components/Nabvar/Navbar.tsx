@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className=" sticky top-0 w-screen bg-primary h-16 font-sans ">
+    <>
       <div className="h-full w-full flex items-center justify-between align-middle">
         <Image src={logo} alt="logo" className="h-14 w-14 ml-4 sm:ml-10" />
         {isMobile ? ( // Renderizar NavbarMenu solo en móvil
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
         )}
       </div>
       {isMobile && <NavbarMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} />}
-    </nav>
+    </>
   );
 };
 

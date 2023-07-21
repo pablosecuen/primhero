@@ -9,10 +9,15 @@ import Tutorials from "@component/components/Tutorials/Tutorials";
 import Clients from "@component/components/Clients/Clients";
 import ContactForm from "@component/components/Contact/Contact";
 import Footer from "@component/components/Footer.tsx/Footer";
+import Navbar from "@component/components/Nabvar/Navbar";
 
 export default function Home() {
   return (
     <main className="flex font-sans min-h-screen flex-col items-center justify-between overflow-hidden  bg-white">
+      <header className="fixed top-0 w-full z-50 bg-primary h-16 font-sans">
+        {" "}
+        <Navbar />
+      </header>
       {/* seccion principal */}
       <section className=" backdrop-filter backdrop-blur-3xl h-screen w-full bg-image1 bg-no-repeat bg-cover bg-right-bottom  sm:bg-center pl-4 -mt-10 sm:pl-10 flex flex-col justify-center ">
         <Landing />
