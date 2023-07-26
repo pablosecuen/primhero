@@ -1,0 +1,27 @@
+/* InfiniteSlider.module.css */
+.sliderContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    animation: slideAnimation 60s linear infinite;
+    animation-play-state: running; /* Add this line to control the animation play state */
+  }
+  
+  /* Add a new rule to pause the animation when the slider is hovered over */
+  .sliderContainer:hover {
+    animation-play-state: paused;
+  }
+  
+  @keyframes slideAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .slide {
+    flex: 0 0 calc(100% / 5);
+  }
+  

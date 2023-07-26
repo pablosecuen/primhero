@@ -17,9 +17,12 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form className="p-4 md:w-1/2 md:mx-auto">
+    <form
+      className="p-4 md:w-1/2 md:mx-auto xl:w-1/3 w-10/12 m-auto  border-2 rounded-2xl lg:py-20 py-10"
+      id="contacto"
+    >
       <div className="w-full flex gap-4">
-        <div className="relative mb-4">
+        <div className="relative mb-4 w-1/2">
           <label
             htmlFor="name"
             className={`absolute left-3 top-4 text-xs font-bold text-gray-700 ${
@@ -44,7 +47,7 @@ const ContactForm: React.FC = () => {
             placeholder=""
           />
         </div>
-        <div className="relative mb-4">
+        <div className="relative mb-4  w-1/2">
           <label
             htmlFor="lastName"
             className={`absolute left-3 top-4 text-xs font-bold text-gray-700 ${
@@ -72,7 +75,7 @@ const ContactForm: React.FC = () => {
       </div>
       <div className="relative mb-4">
         <label
-          htmlFor="mail"
+          htmlFor="email"
           className={`absolute left-3 top-4 text-xs font-bold text-gray-700 ${
             formData.email ? "opacity-0" : "opacity-100"
           } transition-opacity pointer-events-none`}
@@ -88,7 +91,7 @@ const ContactForm: React.FC = () => {
           onFocus={() => setFormData((prevData) => ({ ...prevData, email: "" }))}
           onBlur={() => {
             if (!formData.email) {
-              setFormData((prevData) => ({ ...prevData, email: "Nombre" }));
+              setFormData((prevData) => ({ ...prevData, email: "email" }));
             }
           }}
           className="w-full px-3 py-2 pl-3 mt-1 text-sm text-gray-900 placeholder-transparent border rounded-md focus:outline-none focus:ring focus:border-secondary"
@@ -97,7 +100,7 @@ const ContactForm: React.FC = () => {
       </div>
       <div className="relative mb-4">
         <label
-          htmlFor="name"
+          htmlFor="phone"
           className={`absolute left-3 top-4 text-xs font-bold text-gray-700 ${
             formData.name ? "opacity-0" : "opacity-100"
           } transition-opacity pointer-events-none`}
@@ -149,7 +152,7 @@ const ContactForm: React.FC = () => {
 
       <button
         type="submit"
-        className="w-full px-4 py-2 text-sm font-bold text-white bg-secondary rounded-md hover:border-2 hover:border-black hover:transition hover:duration-500 focus:outline-none focus:ring focus:border-yellow-600"
+        className="w-full px-4 py-2  text-sm font-bold text-white bg-secondary rounded-md hover:border-2 hover:border-black hover:transition hover:duration-500 focus:outline-none focus:ring focus:border-yellow-600"
       >
         Enviar
       </button>

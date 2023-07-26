@@ -5,7 +5,7 @@ import hamburger from "../../assets/hamburguerLogosvg/hamburger-svgrepo-com.svg"
 import Image from "next/image";
 import NavbarMenu from "../NavbarMenu/NavbarMenu";
 import NavnarMenuDesktop from "../NavbarMenu/NavnarMenuDesktop";
-import exit from "../../assets/exit/BotonExit.svg";
+import ButtonSignIn from "../ButtonSignIn/ButtonSignIn";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className="h-full w-full flex items-center justify-between align-middle">
+      <div className="h-full w-full flex items-center justify-between align-middle lg:pr-8">
         <Image src={logo} alt="logo" className="h-14 w-14 ml-4 sm:ml-10" />
         {isMobile ? ( // Renderizar NavbarMenu solo en móvil
           <button onClick={toggleMenu}>
@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
           // Renderizar lista de elementos <a> fuera de móvil
           <>
             <NavnarMenuDesktop />
-            <Image src={exit} alt="exit" className="sm:mr-10" />
+            <ButtonSignIn />
           </>
         )}
       </div>

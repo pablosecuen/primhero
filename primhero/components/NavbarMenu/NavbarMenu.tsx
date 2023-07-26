@@ -4,7 +4,6 @@ import exit from "../../assets/exit/BotonExit.svg";
 import { log } from "console";
 
 const NavbarMenu: React.FC<NavbarMenuProps> = ({ isOpen, toggleMenu }) => {
-  console.log("", isOpen);
   return (
     <>
       {isOpen && (

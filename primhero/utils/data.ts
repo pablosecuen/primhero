@@ -26,10 +26,11 @@ export const services = [
     },
 ]
 
-export const clientsLogos = [
-    client1,
-    client2,
-    client3,
-    client4,
-    client5,
+export const slider = [
+    {icon: client1, tittle:"GALPRO SRL", url:"https://www.galpro.com.ar/"},
+    {icon: client2, tittle:"REFIL", url:"https://www.refil.com.ar/"},
+    {icon: client3, tittle:"BINDER PLUS", url:"https://binderplus.com.ar/"},
+    {icon: client4, tittle:"WIENER LAB", url:"https://www.wiener-lab.com.ar/es-AR/"},
+    {icon: client5, tittle:"SOLUCIONES", url:""},
+  
 ]

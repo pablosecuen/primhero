@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+      scrollbar: ["rounded"],
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
@@ -28,7 +29,7 @@ module.exports = {
         spacing: "margin, padding",
       },
       backgroundImage: {
-        image1: "url('../assets/background/background1.svg')",
+        image1: "url('../assets/background/background11.png')",
         image2: "url('../assets/background/background2.svg')",
       },
       fontFamily: {
@@ -37,5 +38,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-filters")],
+  plugins: [require("tailwindcss-filters", "tailwind-scrollbar")],
 };
