@@ -4,12 +4,12 @@ import pic from "../../assets/services/picEmployee.svg";
 
 export default function Services() {
   return (
-    <div className="flex flex-col md:flex-row w-full ">
+    <div className="flex flex-col md:flex-row w-full sm:h-[600px] ">
       <div className="flex flex-col w-full md:w-1/2 justify-center items-center align-middle">
         {services.map((service, index) => (
           <div className="w-full flex flex-col py-4" key={index}>
             <article className="  text-black flex gap-4 px-10  mt-8 mb-8">
-              <Image src={service.icon} alt="icon" width={50} height={50} className="self-start " />
+              <Image src={service.icon} alt="icon" width={50} height={50} className="self-center" />
               <div className="flex flex-col tracking-tighter ">
                 <h3 className="font-extrabold">{service.title}</h3>
                 <p className="pt-4 text-md font-semibold">{service.description}</p>

@@ -47,17 +47,21 @@ const Clients = () => {
   const clonedSlider = [...slider, ...slider, ...slider, ...slider, ...slider]; // Clone and concatenate the slider array
 
   return (
-    <article className="relative flex flex-col md:flex-row justify-center items-center sm:h-64 md:h-96 w-full overflow-hidden py-6 ">
+    <article className="relative flex flex-col md:flex-row justify-center items-center sm:h-64 md:h-64 w-full overflow-hidden py-6 ">
       <div ref={sliderRef} className={`${styles.sliderContainer} absolute flex`}>
         {clonedSlider.map((s, index) => (
-          <div key={index} className="w-full gap-10 mx-20 ">
-            <div className="w-80 h-80  flex items-center align-middle justify-center gap-10">
-              <Link href={s?.url} className="flex justify-center items-center align-middle">
+          <div
+            key={index}
+            className="w-full gap-10 mx-20 flex  justify-center items-center align-middle"
+          >
+            <div className="w-80 h-48  flex gap-10  justify-center items-center align-middle">
+              <Link href={s?.url} className=" flex justify-center">
                 <Image
                   src={s.icon}
                   alt={s.tittle}
                   title={s.tittle}
-                  className="md:w-96 sm:w-64 hover:cursor-pointer md:pt-10 sm:pb-12 md:pb-0"
+                  className="md:w-48 sm:w-32 hover:cursor-pointer"
+                  // md:pt-10 sm:pb-12 md:pb-0
                 />
               </Link>
             </div>
