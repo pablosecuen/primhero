@@ -15,10 +15,10 @@ function Footer() {
         {" "}
         <ul className="w-full p-5 px-10 md:px-0">
           <h5 className="text-secondary py-2">Direcciones</h5>
-          <li className=" text-xs pb-2 ">
+          <li className=" text-xs pb-2  text-white">
             Almafuerte 429, entre Montes de Oca y Lavalle, Avellaneda, Provincia de Bs As.
           </li>
-          <li className=" text-xs">
+          <li className=" text-xs text-white">
             Ruta 11 N° 1175, esquina La Paz, Puerto General San Martin, Santa Fe.
           </li>
         </ul>
@@ -26,12 +26,12 @@ function Footer() {
       <div className="lg:w-full  border-white w-full h-full flex justify-center items-center  ">
         <div className="w-full p-5 flex flex-col justify-center items-center lg:items-start">
           <h5 className="text-secondary">Contacto</h5>
-          <span>
+          <span className="text-white">
             +123 456 789
             <br />
             primhero@gmail.com
           </span>
-          <ul className="flex">
+          <ul className="flex text-white">
             <li>svg ig</li>
             <li>svg fb</li>
           </ul>
