@@ -18,9 +18,10 @@ const ContactForm: React.FC = () => {
 
   return (
     <form
-      className="p-4 md:w-1/2 md:mx-auto xl:w-1/3 w-10/12 m-auto  border-2 rounded-2xl lg:py-20 py-10"
+      className="p-4 md:w-1/2 md:mx-auto xl:w-1/3 w-10/12 m-auto  border-2 rounded-2xl lg:py-10 py-10"
       id="contacto"
     >
+      <h3 className="text-center pb-10 text-black font-extrabold">CONTACTANOS !</h3>
       <div className="w-full flex gap-4">
         <div className="relative mb-4 w-1/2">
           <label
