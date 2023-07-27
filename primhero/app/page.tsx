@@ -5,7 +5,7 @@ import Iso from "@component/components/Iso/Iso";
 import Tutorials from "@component/components/Tutorials/Tutorials";
 import Clients from "@component/components/Clients/Clients";
 import ContactForm from "@component/components/Contact/Contact";
-import Footer from "@component/components/Footer.tsx/Footer";
+import Footer from "@component/components/Footer/Footer";
 import Navbar from "@component/components/Nabvar/Navbar";
 import Services from "@component/components/Services/Services";
 

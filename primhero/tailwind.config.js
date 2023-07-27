@@ -31,6 +31,8 @@ module.exports = {
       backgroundImage: {
         image1: "url('../assets/background/background11.png')",
         image2: "url('../assets/background/background2.svg')",
+        metal: "url('../assets/background/metal1.jpg')",
+        metal2: "url('../assets/background/metal2.jpg')",
       },
       fontFamily: {
         sans: ["Barlow", "sans-serif"],

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { NavbarMenuProps } from "../../types/NavbarMenuProps";
 import exit from "../../assets/exit/BotonExit.svg";
-import { log } from "console";
+import Link from "next/link";
+import handleNavItemClick from "@component/utils/handleNavItemClick";
 
 const NavbarMenu: React.FC<NavbarMenuProps> = ({ isOpen, toggleMenu }) => {
   return (
@@ -14,7 +15,7 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ isOpen, toggleMenu }) => {
           ></div>
 
           <div
-            className={`fixed top-12 right-0 w-[50%] h-screen bg-primary shadow-2xl  p-4 transition-transform duration-1000 ${
+            className={`fixed top-12 right-0 w-[50%] h-screen bg-primary shadow-2xl  p-4 transition-transform duration-1000 mt-4 ${
               isOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
@@ -39,25 +40,30 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ isOpen, toggleMenu }) => {
             </div>
 
             <ul className="flex flex-col">
-              <li className="my-2 hover:text-secondary transition duration-500">
-                <a href="#inicio">Inicio</a>
+              <li className="my-2 hover:text-secondary transition duration-700">
+                <Link href="http://localhost:3000/">Inicio</Link>
               </li>
-              <li className="my-2 hover:text-secondary transition duration-500">
-                <a href="#servicios">Tracking</a>
+              <li className="my-2 hover:text-secondary transition duration-700">
+                <Link href="http://localhost:3000/tracking">Tracking</Link>
               </li>
-              <li className="my-2 hover:text-secondary transition duration-500">
-                <a href="#servicios">Servicios</a>
+              <li className="my-2 hover:text-secondary transition duration-700">
+                <Link href="#servicios" onClick={(e) => handleNavItemClick(e, "servicios")}>
+                  Servicios
+                </Link>
               </li>
-              <li className="my-2 hover:text-secondary transition duration-500">
-                <a href="#servicios">Nosotros</a>
+              <li className="my-2 hover:text-secondary transition duration-700">
+                <Link href="#nosotros" onClick={(e) => handleNavItemClick(e, "nosotros")}>
+                  Nosotros
+                </Link>
               </li>
-              <li className="my-2 hover:text-secondary transition duration-500">
-                <a href="#servicios">Tutoriales</a>
+              <li className="my-2 hover:text-secondary transition duration-700">
+                <Link href="#tutoriales" onClick={(e) => handleNavItemClick(e, "tutoriales")}>
+                  Tutoriales
+                </Link>
               </li>
-              <li className="my-2 hover:text-secondary transition duration-500">
-                <a href="#servicios">Contactos</a>
-              </li>
-              {/* Add more anchors here */}
+              <Link href="#contacto" onClick={(e) => handleNavItemClick(e, "contacto")}>
+                Contacto
+              </Link>
             </ul>
           </div>
         </>

@@ -7,7 +7,7 @@ import ButtonSignIn from "../ButtonSignIn/ButtonSignIn";
 
 function Footer() {
   return (
-    <footer className="bg-primary py-8 grid grid-cols-2 grid-rows-3 w-full h-full  font-sans lg:flex lg:justify-evenly lg:items-center lg:align-middle">
+    <footer className="bg-metal2 bg-contain py-8 grid grid-cols-2 grid-rows-3 w-full h-full  font-sans lg:flex lg:justify-evenly lg:items-center lg:align-middle">
       <div className="lg:w-full  flex flex-col justify-center items-center align-middle ">
         <Image src={logo} alt="logo" width={100} height={100} />
       </div>
