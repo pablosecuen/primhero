@@ -1,9 +1,15 @@
 "use client";
 import { FormData } from "@component/types/FormData";
-import React, { useState, ChangeEvent } from "react";
+import Script from "next/script";
+import React, { useState, ChangeEvent, FormEvent } from "react";
+import emailjs from "emailjs-com";
+import { Toaster, toast } from "sonner";
+import { isValidName, isValidEmail, isSafeMessage } from "../../utils/formValidation";
+
+emailjs.init("nDkFXlv2Kmr_6HqHw");
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState({
     name: "",
     lastName: "",
     phone: "",
@@ -16,11 +22,71 @@ const ContactForm: React.FC = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    // Realizamos las validaciones
+    if (!isValidName(formData.name)) {
+      toast.error("Por favor, ingrese un nombre válido (solo letras).");
+      return;
+    }
+
+    if (!isValidName(formData.lastName)) {
+      toast.error("Por favor, ingrese un apellido válido (solo letras).");
+      return;
+    }
+
+    if (!isValidEmail(formData.email)) {
+      toast.error("Por favor, ingrese un correo electrónico válido.");
+      return;
+    }
+
+    if (!isSafeMessage(formData.message)) {
+      toast.error("El mensaje no puede contener contenido HTML o caracteres de riesgo.");
+      return;
+    }
+
+
+
+    try {
+      // Configura los parámetros del correo electrónico
+      const emailParams = {
+        from_name: formData.name + " " + formData.lastName,
+        phone: formData.phone,
+        email: formData.email,
+        message: formData.message,
+      };
+
+      // Envía el correo electrónico utilizando EmailJS
+      await emailjs.send("service_5lq6prv", "template_cmf2vda", emailParams, "nDkFXlv2Kmr_6HqHw");
+      const promise = emailjs.send(
+        "service_5lq6prv",
+        "template_cmf2vda",
+        emailParams,
+        "nDkFXlv2Kmr_6HqHw"
+      );
+      toast.promise(promise, {
+        loading: "Enviando correo por favor aguarde...",
+        success: "Correo electrónico enviado con éxito.",
+        error: "Error al enviar el correo electrónico.",
+      });
+      setFormData({
+        name: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {}
+  };
+
   return (
     <form
       className="p-4 md:w-1/2 md:mx-auto xl:w-1/3 w-10/12 m-auto  border-2 rounded-2xl lg:py-10 py-10"
       id="contacto"
+      onSubmit={handleSubmit}
     >
+      <Toaster position="top-center" richColors />
       <h3 className="text-center pb-10 text-black font-extrabold">CONTACTANOS !</h3>
       <div className="w-full flex gap-4">
         <div className="relative mb-4 w-1/2">
