@@ -2,7 +2,7 @@ import React from "react";
 
 function Landing() {
   return (
-    <div className="w-screen h-screen text-xl -mb-28 sm:-mb-28 lg:-mb-28 md:-mb-28 xl:-mb-0 flex flex-col  justify-center items-start pl-12 md:pl-48 bg-image1 bg-cover bg-clip-border bg-no-repeat bg-center">
+    <div className="w-screen h-screen text-xl -mb-28 sm:-mb-28 lg:-mb-28 md:-mb-28 xl:-mb-4 flex flex-col  justify-center items-start pl-12 md:pl-48 bg-image1 bg-cover bg-clip-border bg-no-repeat bg-center">
       {" "}
       <h2 className="text-xl font-extrabold pt-4 drop-shadow-md font-condensed lg:text-4xl lg:w-[700px]">
         <p>

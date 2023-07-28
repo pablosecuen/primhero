@@ -6,7 +6,7 @@ function NavnarMenuDesktop() {
   return (
     <div>
       {" "}
-      <ul className="flex gap-10  transition duration-500">
+      <ul className="flex gap-10  transition duration-500 ">
         <li className="my-2 hover:text-secondary transition duration-700 drop-shadow-xl shadow-black">
           <Link href="http://localhost:3000/">Inicio</Link>
         </li>

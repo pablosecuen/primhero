@@ -19,14 +19,14 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ isOpen, toggleMenu }) => {
               isOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
-            <div className="w-full border flex flex-col justify-around items-center align-middle">
+            {/* <div className="w-full border flex flex-col justify-around items-center align-middle">
               <Image
                 src={exit}
                 alt="foto"
                 className="rounded-full border"
                 width={50}
                 height={50}
-                layout="fixed" // Agrega el atributo layout="fixed" para establecer el ancho y la altura
+                layout="fixed" 
               />
               <p className="hover:text-secondary transition duration-500">usuario</p>
               <Image
@@ -35,9 +35,9 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ isOpen, toggleMenu }) => {
                 className=""
                 width={100}
                 height={100}
-                layout="fixed" // Agrega el atributo layout="fixed" para establecer el ancho y la altura
+                layout="fixed" 
               />
-            </div>
+            </div> */}
 
             <ul className="flex flex-col">
               <li className="my-2 hover:text-secondary transition duration-700">

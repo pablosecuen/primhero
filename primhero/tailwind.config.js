@@ -40,5 +40,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-filters", "tailwind-scrollbar")],
+  plugins: [require("tailwindcss-filters", "tailwind-scrollbar", "tailwindcss-animated")],
 };

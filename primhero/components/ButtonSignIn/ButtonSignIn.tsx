@@ -19,8 +19,8 @@ function ButtonSignIn() {
 
   return (
     <div>
-      <Image src={button} alt="boton" width={100} height={100} onClick={handleButtonClick} />
-      {isModalOpen && <Modal onClose={handleCloseModal} />}
+      {/* <Image src={button} alt="boton" width={100} height={100} onClick={handleButtonClick} />
+      {isModalOpen && <Modal onClose={handleCloseModal} />} */}
     </div>
   );
 }

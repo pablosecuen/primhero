@@ -13,10 +13,10 @@ function Testimonial() {
         alt="trucks"
         height={150}
         width={150}
-        className="m-auto w-full h-full p-10  sm:w-1/2 lg:pr-48"
+        className="m-auto w-full h-full p-10  sm:w-1/2 lg:pr-48 "
       />
       <div>
-        <div className="p-4 flex flex-col   lg:h-full gap-4 pt-8">
+        <div className="p-4 flex flex-col   lg:h-full gap-4 pt-8 ">
           <h3 className="text-black font-extrabold lg:pt-10 md:pl-10 lg:text-2xl">
             ES IMPORTANTE PARA VOS, <br />
             PARA <span className="text-secondary ">NOSOTROS TAMBIÉN</span>
