@@ -9,24 +9,20 @@ Bienvenido a Prime Hero, tu aliado en logística para el seguimiento y rastreo d
 Tecnologías detrás de Prime Hero 🛠️
 
 ![Logo](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-
-Next.js: Nuestro potente framework de React para brindarte una experiencia web rápida y fluida.
+  Nuestro potente framework de React para brindarte una experiencia web rápida y fluida.
 
 ![Logo](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-
-React: La biblioteca de JavaScript que nos permite crear interfaces de usuario modernas y receptivas.
+  La biblioteca de JavaScript que nos permite crear interfaces de usuario modernas y receptivas.
 
 ![Logo](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-
-TypeScript: Añadimos tipos estáticos a JavaScript para garantizar un código más seguro y eficiente.
+  Añadimos tipos estáticos a JavaScript para garantizar un código más seguro y eficiente.
 
 ![Logo](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
-
-JavaScript: El lenguaje de programación principal para brindar una experiencia dinámica e interactiva en el navegador.
+  El lenguaje de programación principal para brindar una experiencia dinámica e interactiva en el navegador.
 
 ![Logo](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-
-Tailwind CSS: Nuestro aliado en diseño, que nos permite crear interfaces atractivas y personalizadas con facilidad.
+  Nuestro aliado en diseño, que nos permite crear interfaces atractivas y personalizadas con facilidad.
+  
 
 Logistics API: Nuestra propia API de logística que se conecta con múltiples servicios de envío para proporcionar información en tiempo real.
 
