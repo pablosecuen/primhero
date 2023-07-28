@@ -8,7 +8,7 @@ Bienvenido a Prime Hero, tu aliado en logística para el seguimiento y rastreo d
 
 Tecnologías detrás de Prime Hero 🛠️
 
-https://github.com/marwin1991/profile-technology-icons/assets/136815194/5f8c622c-c217-4649-b0a9-7e0ee24bd704 Next.js: Nuestro potente framework de React para brindarte una experiencia web rápida y fluida.
+![Logo](https://raw.githubusercontent.com/marwin1991/profile-technology-icons/assets/136815194/5f8c622c-c217-4649-b0a9-7e0ee24bd704) Next.js: Nuestro potente framework de React para brindarte una experiencia web rápida y fluida.
 
 React: La biblioteca de JavaScript que nos permite crear interfaces de usuario modernas y receptivas.
 
