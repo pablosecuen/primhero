@@ -1,15 +1,13 @@
 Prime Hero: Tu aliado en logística 🚚
 
-
 ![Prime Hero Logo](./primhero/assets/logo/Logo.svg)
 
-
-Bienvenido a Prime Hero, tu aliado en logística para el seguimiento y rastreo de envíos a nivel nacional e internacional. Nuestra plataforma te ofrece una experiencia de primera clase al proporcionarte información detallada sobre el estado y ubicación de tus paquetes, para que siempre estés informado y tranquilo.
+Bienvenido a Prime Hero, la plataforma de logística desarrollada especialmente para mi cliente, Prime Hero. Aquí encontrarás un sistema de seguimiento y rastreo de envíos a nivel nacional e internacional. Nuestra aplicación ha sido diseñada para ofrecerte una experiencia de primera clase, proporcionándote información detallada sobre el estado y ubicación de tus paquetes, para que siempre estés informado y tranquilo.
 
 Tecnologías detrás de Prime Hero 🛠️
 
 ![Logo](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-  Nuestro potente framework de React para brindarte una experiencia web rápida y fluida.
+  Nuestro potente framework de React que brinda una experiencia web rápida y fluida.
 
 ![Logo](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
   La biblioteca de JavaScript que nos permite crear interfaces de usuario modernas y receptivas.
@@ -22,7 +20,6 @@ Tecnologías detrás de Prime Hero 🛠️
 
 ![Logo](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
   Nuestro aliado en diseño, que nos permite crear interfaces atractivas y personalizadas con facilidad.
-  
 
 Logistics API: Nuestra propia API de logística que se conecta con múltiples servicios de envío para proporcionar información en tiempo real.
 
@@ -42,8 +39,6 @@ Capturas de pantalla de Prime Hero 📸
 
 ![image](https://github.com/pablosecuen/primhero/assets/114095359/6fabc8b4-c80e-48a5-a4e6-f18a250f4d97)
 
-
-
 Cómo empezar a utilizar Prime Hero 💻
 
 Ingresa el número de seguimiento de tu envío en el campo de búsqueda.
@@ -54,11 +49,8 @@ Mantente informado con notificaciones en tiempo real sobre el progreso de tu env
 
 Contribuciones y retroalimentación 🤝
 
-Valoramos tus comentarios y sugerencias. Si tienes alguna idea para mejorar nuestra plataforma o encuentras algún problema, no dudes en contactarnos o abrir un issue en GitHub. ¡Tu opinión es
-fundamental para seguir mejorando!
+Valoramos tus comentarios y sugerencias. Si tienes alguna idea para mejorar nuestra plataforma o encuentras algún problema, no dudes en contactarnos o abrir un issue en GitHub. ¡Tu opinión es fundamental para seguir mejorando!
 
 ¡Únete a Prime Hero y simplifica tus envíos! 🚀
 
-En Prime Hero, estamos comprometidos a brindarte una experiencia excepcional en logística. Nuestra misión es hacer que el proceso de rastreo de paquetes sea fácil, intuitivo y transparente para 
-que puedas concentrarte en lo que realmente importa. ¡Únete a nosotros y descubre por qué somos los héroes de la logística! 🦸‍♂️📦
-
+En Prime Hero, estamos comprometidos a brindarte una experiencia excepcional en logística. Nuestra misión es hacer que el proceso de rastreo de paquetes sea fácil, intuitivo y transparente para que puedas concentrarte en lo que realmente importa. ¡Únete a nosotros y descubre por qué somos los héroes de la logística! 🦸‍♂️📦
