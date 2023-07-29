@@ -1,11 +1,13 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import logo from "../../assets/logo/Logo.svg";
-import instagram from "../../assets/socialmedia/instagram.svg";
-import facebook from "../../assets/socialmedia/facebook.svg";
+import instagram from "react-useanimations/lib/instagram";
+import facebook from "react-useanimations/lib/facebook";
 import iso from "../../assets/iso/isowhite.svg";
 import ButtonSignIn from "../ButtonSignIn/ButtonSignIn";
 import Link from "next/link";
+import UseAnimations from "react-useanimations";
 
 function Footer() {
   return (
@@ -36,7 +38,12 @@ function Footer() {
           <ul className="flex text-white gap-4 pt-2">
             <li>
               <Link href={"https://www.instagram.com/transporteprimhero/"} target="_blank">
-                <Image src={instagram} alt="logo" width={20} height={20} />
+                <UseAnimations
+                  animation={instagram}
+                  size={35}
+                  fillColor="#f9b400"
+                  strokeColor="#f9b400"
+                />
               </Link>
             </li>
             <li>
@@ -44,7 +51,12 @@ function Footer() {
                 href={"https://m.facebook.com/people/Transporte-Primhero/100084061013848/"}
                 target="_blank"
               >
-                <Image src={facebook} alt="logo" width={20} height={20} />
+                <UseAnimations
+                  animation={facebook}
+                  size={35}
+                  fillColor="#f9b400"
+                  strokeColor="#f9b400"
+                />
               </Link>
             </li>
           </ul>
