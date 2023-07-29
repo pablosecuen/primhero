@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       <div className="h-full w-full flex items-center justify-between align-middle lg:pr-8 bg-metal2 bg-center bg-contain backdrop-blur-3xl">
-        <Image src={logo} alt="logo" className="h-20 w-20 ml-4 sm:ml-10  " />
+        <Image src={logo} alt="logo" className="h-16 w-20 ml-4 sm:ml-10 " />
         {isMobile ? ( // Renderizar NavbarMenu solo en móvil
           <button onClick={toggleMenu}>
             <Image src={hamburger} alt="hamburger" className="h-12 w-12 mr-4 " />
