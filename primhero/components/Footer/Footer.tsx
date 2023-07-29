@@ -8,6 +8,7 @@ import iso from "../../assets/iso/isowhite.svg";
 import ButtonSignIn from "../ButtonSignIn/ButtonSignIn";
 import Link from "next/link";
 import UseAnimations from "react-useanimations";
+import handleNavItemClick from "@component/utils/handleNavItemClick";
 
 function Footer() {
   return (
@@ -66,15 +67,31 @@ function Footer() {
       <div className="lg:w-full  flex justify-center items-center align-middle  w-full h-full sm:pl-10 md:pl-24 lg:pl-0  xl:pl-0 border-l-2 ">
         <ul className="text-secondary w-1/2 h-1/2 flex flex-col  justify-center items-start lg:text-sm ">
           <li>
-            <a href="/">INICIO</a>
+            <Link href="/">INICIO</Link>
           </li>
           <li>
-            <a href="/tracking">TRACKING</a>
+            <Link href="/tracking">TRACKING</Link>
           </li>
-          <li>SERVICIOS</li>
-          <li>NOSOTROS</li>
-          <li>TUTORIALES</li>
-          <li>CONTACTO</li>
+          <li>
+            <Link href="#servicios" onClick={(e) => handleNavItemClick(e, "servicios")}>
+              SERVICIOS
+            </Link>
+          </li>
+          <li>
+            <Link href="#nosotros" onClick={(e) => handleNavItemClick(e, "nosotros")}>
+              NOSOTROS
+            </Link>
+          </li>
+          <li>
+            <Link href="#tutoriales" onClick={(e) => handleNavItemClick(e, "tutoriales")}>
+              TUTORIALES
+            </Link>
+          </li>
+          <li>
+            <Link href="#contacto" onClick={(e) => handleNavItemClick(e, "contacto")}>
+              CONTACTO
+            </Link>
+          </li>
         </ul>
       </div>
 

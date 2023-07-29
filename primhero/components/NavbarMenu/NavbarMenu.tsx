@@ -39,29 +39,29 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ isOpen, toggleMenu }) => {
       >
         <ul className="flex flex-col">
           <li className="my-2 hover:text-secondary transition duration-500">
-            <a href="/">Inicio</a>
+            <Link href="/">Inicio</Link>
           </li>
           <li className="my-2 hover:text-secondary transition duration-500">
-            <a href="/tracking">Tracking</a>
+            <Link href="/tracking">Tracking</Link>
           </li>
           <li className="my-2 hover:text-secondary transition duration-500">
-            <a href="#servicios" onClick={(e) => handleNavItemClick(e, "servicios")}>
+            <Link href="#servicios" onClick={(e) => handleNavItemClick(e, "servicios")}>
               Servicios
-            </a>
+            </Link>
           </li>
           <li className="my-2 hover:text-secondary transition duration-500">
-            <a href="#nosotros" onClick={(e) => handleNavItemClick(e, "nosotros")}>
+            <Link href="#nosotros" onClick={(e) => handleNavItemClick(e, "nosotros")}>
               Nosotros
-            </a>
+            </Link>
           </li>
           <li className="my-2 hover:text-secondary transition duration-500">
-            <a href="#tutoriales" onClick={(e) => handleNavItemClick(e, "tutoriales")}>
+            <Link href="#tutoriales" onClick={(e) => handleNavItemClick(e, "tutoriales")}>
               Tutoriales
-            </a>
+            </Link>
           </li>
-          <a href="#contacto" onClick={(e) => handleNavItemClick(e, "contacto")}>
+          <Link href="#contacto" onClick={(e) => handleNavItemClick(e, "contacto")}>
             Contacto
-          </a>
+          </Link>
         </ul>
       </div>
     </>
