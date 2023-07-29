@@ -18,9 +18,9 @@ function ButtonSignIn() {
   console.log();
 
   return (
-    <div className="w-16">
-      {/* <Image src={button} alt="boton" width={100} height={100} onClick={handleButtonClick} />
-      {isModalOpen && <Modal onClose={handleCloseModal} />} */}
+    <div className="w-24">
+      <Image src={button} alt="boton" width={150} height={150} onClick={handleButtonClick} />
+      {isModalOpen && <Modal onClose={handleCloseModal} />}
     </div>
   );
 }

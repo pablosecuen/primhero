@@ -1,12 +1,15 @@
 "use client";
-import Image from "next/image";
 import { NavbarMenuProps } from "../../types/NavbarMenuProps";
-import exit from "../../assets/exit/BotonExit.svg";
 import Link from "next/link";
 import handleNavItemClick from "@component/utils/handleNavItemClick";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import ButtonSignIn from "../ButtonSignIn/ButtonSignIn";
+import Modal from "../ModalLogin/ModalLogin";
+import Image from "next/image";
+import button from "../../assets/exit/BotonExit.svg";
 
 const NavbarMenu: React.FC<NavbarMenuProps> = ({ isOpen, toggleMenu }) => {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   useEffect(() => {
     const handleEscapeKey = (event: any) => {
       if (event.key === "Escape") {
@@ -23,6 +26,14 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ isOpen, toggleMenu }) => {
     };
   }, [isOpen, toggleMenu]);
 
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleButtonClick = () => {
+    setIsModalOpen(true);
+  };
+
   return (
     <>
       <div
@@ -31,12 +42,17 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ isOpen, toggleMenu }) => {
         } fixed h-screen sm:mt-16 mt-14 w-screen top-0 left-0 bg-black/20`}
         onClick={toggleMenu}
       ></div>
-
+      {isModalOpen && <Modal onClose={handleCloseModal} />}
       <div
         className={`transition-all duration-1000 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } fixed top-14 sm:top-16 right-0 w-[50%] h-screen bg-primary shadow-2xl p-4 `}
       >
+        <div className="w-24 mx-auto py-8">
+          <div className="w-24">
+            <Image src={button} alt="boton" width={150} height={150} onClick={handleButtonClick} />
+          </div>
+        </div>
         <ul className="flex flex-col">
           <li className="my-2 hover:text-secondary transition duration-500">
             <Link href="/">Inicio</Link>
