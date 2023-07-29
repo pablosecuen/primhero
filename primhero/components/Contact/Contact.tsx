@@ -10,11 +10,11 @@ emailjs.init("nDkFXlv2Kmr_6HqHw");
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    lastName: "",
-    phone: "",
-    email: "",
-    message: "",
+    name: "Nombre",
+    lastName: "Apellido",
+    phone: "Teléfono",
+    email: "Correo electrónico",
+    message: "Escribe tu mensaje aquí",
   });
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -46,38 +46,34 @@ const ContactForm: React.FC = () => {
       return;
     }
 
+    // Configura los parámetros del correo electrónico
+    const emailParams = {
+      from_name: formData.name + " " + formData.lastName,
+      phone: formData.phone,
+      email: formData.email,
+      message: formData.message,
+    };
 
-
-    try {
-      // Configura los parámetros del correo electrónico
-      const emailParams = {
-        from_name: formData.name + " " + formData.lastName,
-        phone: formData.phone,
-        email: formData.email,
-        message: formData.message,
-      };
-
-      // Envía el correo electrónico utilizando EmailJS
-      await emailjs.send("service_5lq6prv", "template_cmf2vda", emailParams, "nDkFXlv2Kmr_6HqHw");
-      const promise = emailjs.send(
-        "service_5lq6prv",
-        "template_cmf2vda",
-        emailParams,
-        "nDkFXlv2Kmr_6HqHw"
-      );
-      toast.promise(promise, {
-        loading: "Enviando correo por favor aguarde...",
-        success: "Correo electrónico enviado con éxito.",
-        error: "Error al enviar el correo electrónico.",
-      });
-      setFormData({
-        name: "",
-        lastName: "",
-        phone: "",
-        email: "",
-        message: "",
-      });
-    } catch (error) {}
+    // Envía el correo electrónico utilizando EmailJS
+    await emailjs.send("service_5lq6prv", "template_cmf2vda", emailParams, "nDkFXlv2Kmr_6HqHw");
+    const promise = emailjs.send(
+      "service_5lq6prv",
+      "template_cmf2vda",
+      emailParams,
+      "nDkFXlv2Kmr_6HqHw"
+    );
+    toast.promise(promise, {
+      loading: "Enviando correo por favor aguarde...",
+      success: "Correo electrónico enviado con éxito.",
+      error: "Error al enviar el correo electrónico.",
+    });
+    setFormData({
+      name: "Nombre",
+      lastName: "Apellido",
+      phone: "Teléfono",
+      email: "Correo electrónico",
+      message: "Escribe tu mensaje aquí",
+    });
   };
 
   return (
@@ -91,6 +87,7 @@ const ContactForm: React.FC = () => {
       <div className="w-full flex gap-4">
         <div className="relative mb-4 w-1/2">
           <label
+            hidden={true}
             htmlFor="name"
             className={`absolute left-3 top-4 text-xs font-bold text-gray-700 ${
               formData.name ? "opacity-0" : "opacity-100"
@@ -111,11 +108,12 @@ const ContactForm: React.FC = () => {
               }
             }}
             className="w-full px-3 py-2 pl-3 mt-1 text-sm text-gray-900 placeholder-transparent border rounded-md focus:outline-none focus:ring focus:border-secondary"
-            placeholder=""
+            placeholder="Nombre"
           />
         </div>
         <div className="relative mb-4  w-1/2">
           <label
+            hidden={true}
             htmlFor="lastName"
             className={`absolute left-3 top-4 text-xs font-bold text-gray-700 ${
               formData.name ? "opacity-0" : "opacity-100"
@@ -136,12 +134,13 @@ const ContactForm: React.FC = () => {
               }
             }}
             className="w-full px-3 py-2 pl-3 mt-1 text-sm text-gray-900 placeholder-transparent border rounded-md focus:outline-none focus:ring focus:border-secondary"
-            placeholder=""
+            placeholder="Apellido"
           />
         </div>
       </div>
       <div className="relative mb-4">
         <label
+          hidden={true}
           htmlFor="email"
           className={`absolute left-3 top-4 text-xs font-bold text-gray-700 ${
             formData.email ? "opacity-0" : "opacity-100"
@@ -162,11 +161,12 @@ const ContactForm: React.FC = () => {
             }
           }}
           className="w-full px-3 py-2 pl-3 mt-1 text-sm text-gray-900 placeholder-transparent border rounded-md focus:outline-none focus:ring focus:border-secondary"
-          placeholder=""
+          placeholder="Correo electrónico"
         />
       </div>
       <div className="relative mb-4">
         <label
+          hidden={true}
           htmlFor="phone"
           className={`absolute left-3 top-4 text-xs font-bold text-gray-700 ${
             formData.name ? "opacity-0" : "opacity-100"
@@ -175,6 +175,7 @@ const ContactForm: React.FC = () => {
           Teléfono
         </label>
         <input
+          placeholder="Teléfono"
           type="text"
           id="phone"
           name="phone"
@@ -187,12 +188,12 @@ const ContactForm: React.FC = () => {
             }
           }}
           className="w-full px-3 py-2 pl-3 mt-1 text-sm text-gray-900 placeholder-transparent border rounded-md focus:outline-none focus:ring focus:border-secondary"
-          placeholder=""
         />
       </div>
 
       <div className="relative mb-4">
         <label
+          hidden={true}
           htmlFor="message"
           className={`absolute  left-3 top-4 text-sm font-bold text-gray-700 ${
             formData.message ? "opacity-0" : "opacity-100"
@@ -203,6 +204,7 @@ const ContactForm: React.FC = () => {
         <textarea
           id="message"
           name="message"
+          placeholder="Escribe tu mensaje aquí"
           rows={4}
           value={formData.message}
           onChange={handleInputChange}
@@ -213,7 +215,6 @@ const ContactForm: React.FC = () => {
             }
           }}
           className="w-full px-3 py-2 pl-3 mt-1 text-sm text-gray-900 placeholder-transparent border rounded-md resize-none focus:outline-none focus:ring focus:border-secondary"
-          placeholder=""
         ></textarea>
       </div>
 
