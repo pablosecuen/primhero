@@ -12,7 +12,7 @@
 /* Customize the scrollbar track */
 ::-webkit-scrollbar {
   background-color: #212529; /* Transparent background */
-  width: 12px; /* Adjust the scrollbar width */
+  width: 14px; /* Adjust the scrollbar width */
 }
 
 ::-webkit-scrollbar:hover {
@@ -21,8 +21,9 @@
 
 /* Customize the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
+  border: 1px solid #000000;
   background-color: #fcb414; /* Adjust the scrollbar thumb color */
-  border-radius: 4px; /* Adjust the scrollbar thumb border radius */
+  border-radius: 300px; /* Adjust the scrollbar thumb border radius */
 }
 
 /* Optionally customize the scrollbar track on hover */

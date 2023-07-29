@@ -4,6 +4,7 @@ import React from "react";
 import logo from "../../assets/logo/Logo.svg";
 import instagram from "react-useanimations/lib/instagram";
 import facebook from "react-useanimations/lib/facebook";
+import youtube from "react-useanimations/lib/youtube";
 import iso from "../../assets/iso/isowhite.svg";
 import ButtonSignIn from "../ButtonSignIn/ButtonSignIn";
 import Link from "next/link";
@@ -54,6 +55,16 @@ function Footer() {
               >
                 <UseAnimations
                   animation={facebook}
+                  size={35}
+                  fillColor="#f9b400"
+                  strokeColor="#f9b400"
+                />
+              </Link>
+            </li>
+            <li>
+              <Link href="">
+                <UseAnimations
+                  animation={youtube}
                   size={35}
                   fillColor="#f9b400"
                   strokeColor="#f9b400"

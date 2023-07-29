@@ -83,7 +83,7 @@ const ContactForm: React.FC = () => {
       onSubmit={handleSubmit}
     >
       <Toaster position="top-center" richColors />
-      <h3 className="text-center pb-10 text-black font-extrabold">CONTACTANOS !</h3>
+      <h3 className="text-center pb-10 text-black font-extrabold">CONTACTANOS Y LLEGA PRIMHERO!</h3>
       <div className="w-full flex gap-4">
         <div className="relative mb-4 w-1/2">
           <label

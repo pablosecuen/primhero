@@ -5,12 +5,15 @@ import pic from "../../assets/services/picEmployee.svg";
 export default function Services() {
   return (
     <div className="flex flex-col md:flex-row w-full sm:h-[600px] ">
-      <div className="flex flex-col w-full md:w-1/2 justify-center items-center align-middle">
+      <div className="flex flex-col  w-full md:w-1/2 justify-center items-center align-middle overflow-y-scroll px-20 ">
         {services.map((service, index) => (
-          <div className="w-full flex flex-col py-4" key={index}>
+          <div
+            className="w-full flex flex-col justify-center items-start align-middle py-4 "
+            key={index}
+          >
             <article className="  text-black flex gap-4 px-10  mt-8 mb-8">
               <Image src={service.icon} alt="icon" width={50} height={50} className="self-center" />
-              <div className="flex flex-col tracking-tighter ">
+              <div className="flex flex-col tracking-tighter md:pl-10 ">
                 <h3 className="font-extrabold">{service.title}</h3>
                 <p className="pt-4 text-md font-semibold">{service.description}</p>
               </div>

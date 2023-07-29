@@ -1,6 +1,11 @@
 import svgExpreso from "../assets/services/Group.svg"
 import svgUrgencia from "../assets/services/prime_clock.svg"
 import svgExclusivo from "../assets/services/Vector.svg"
+import cargas from "../assets/services/argentina.svg"
+import transporte from "../assets/services/box.svg"
+import contenedores from "../assets/services/cargo.svg"
+import pago from "../assets/services/payment-method.svg"
+import tramites from "../assets/services/mail-send.svg"
 import client1  from "../assets/clients/Capa_1-1.svg"
 import client2  from "../assets/clients/Capa_1.svg"
 import client3  from "../assets/clients/image7.svg"
@@ -24,6 +29,32 @@ export const services = [
         description: "Buenos Aires - San Lorenzo / San Lorenzo - Buenos Aires.",
         icon: svgExclusivo,
     },
+    {
+        title:"CARGAS COMPLETAS ",
+        description: "A todo el país. ",
+        icon: cargas,
+    },
+    {
+        title:"TRANSPORTE Y DISTRIBUCIÓN ",
+        description: "De cargas generales, mudanzas, encomiendas ",
+        icon: transporte,
+    },
+    {
+        title:"MOVIMIENTO DE CONTENEDORES ",
+        description: "Este servicio contempla el retiro y entrega del contenedor hasta su posterior devolución en puerto.",
+        icon: contenedores,
+    },
+    {
+        title:"PAGO CONTRA REEMBOLSO ",
+        description: "Realizamos la distribución y cobranza de sus productos.",
+        icon: pago,
+    },
+    {
+        title:"GESTIÓN DE TRÁMITES ",
+        description: "Nos encargamos de realizar sus diligencias administrativas.",
+        icon: contenedores,
+    },
+  
 ]
 
 export const slider = [
