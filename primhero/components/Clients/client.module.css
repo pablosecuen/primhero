@@ -24,4 +24,10 @@
   .slide {
     flex: 0 0 calc(100% / 5);
   }
+
+  @media (max-width: 768px) {
+    .sliderContainer {
+        animation-duration: 10s; /* Change the animation duration for mobile */
+    }
+}
   

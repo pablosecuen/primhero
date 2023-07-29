@@ -28,14 +28,14 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ isOpen, toggleMenu }) => {
       <div
         className={`transition-all duration-500 ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        } fixed h-screen mt-16 w-screen top-0 left-0 bg-black/20`}
+        } fixed h-screen sm:mt-16 mt-14 w-screen top-0 left-0 bg-black/20`}
         onClick={toggleMenu}
       ></div>
 
       <div
         className={`transition-all duration-1000 ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } fixed top-12 right-0 w-[50%] h-screen bg-primary shadow-2xl p-4 mt-4`}
+        } fixed top-14 sm:top-16 right-0 w-[50%] h-screen bg-primary shadow-2xl p-4 `}
       >
         <ul className="flex flex-col">
           <li className="my-2 hover:text-secondary transition duration-500">

@@ -52,9 +52,9 @@ const Clients = () => {
         {clonedSlider.map((s, index) => (
           <div
             key={index}
-            className="w-full gap-10 mx-20 flex  justify-center items-center align-middle"
+            className="w-full gap-10 sm:mx-10 mx-4 flex  justify-center items-center align-middle"
           >
-            <div className="w-80 h-48  flex gap-10  justify-center items-center align-middle">
+            <div className="sm:w-80 h-48 w-40  flex gap-10  justify-center items-center align-middle">
               <Link href={s?.url} className=" flex justify-center">
                 <Image
                   src={s.icon}

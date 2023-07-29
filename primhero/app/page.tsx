@@ -12,12 +12,12 @@ import Services from "@component/components/Services/Services";
 export default function Home() {
   return (
     <main className="flex font-sans min-h-screen w-full flex-col items-center justify-between overflow-hidden  bg-white">
-      <header className="fixed top-0 w-full z-50 bg-primary h-16 font-sans">
+      <header className="fixed top-0 w-full z-50 bg-primary sm:h-16 h-14 font-sans">
         {" "}
         <Navbar />
       </header>
       {/* seccion principal */}
-      <section className="mt-16">
+      <section className="sm:mt-16 mt-14">
         {" "}
         <Landing />
       </section>

@@ -34,11 +34,11 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className="h-full w-full flex items-center justify-between align-middle lg:pr-8 bg-metal2 bg-center bg-contain backdrop-blur-3xl">
-        <Image src={logo} alt="logo" className="h-16 w-20 ml-4 sm:ml-10" />
+      <div className="sm:h-full h-14 w-full flex items-center justify-between align-middle lg:pr-8 bg-metal2 bg-center bg-contain backdrop-blur-3xl">
+        <Image src={logo} alt="logo" className="sm:h-16 h-12 sm:w-20 w-16 ml-4 sm:ml-10" />
         {isMobile ? ( // Renderizar NavbarMenu solo en móvil
           <button onClick={toggleMenu} className=" animation-container">
-            <UseAnimations animation={menu2} size={56} fillColor="#f9b400" strokeColor="#f9b400" />
+            <UseAnimations animation={menu2} size={50} fillColor="#f9b400" strokeColor="#f9b400" />
           </button>
         ) : (
           // Renderizar lista de elementos <a> fuera de móvil
