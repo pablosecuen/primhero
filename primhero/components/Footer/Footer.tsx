@@ -1,9 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import logo from "../../assets/logo/Logo.svg";
-import exit from "../../assets/exit/BotonExit.svg";
+import instagram from "../../assets/socialmedia/instagram.svg";
+import facebook from "../../assets/socialmedia/facebook.svg";
 import iso from "../../assets/iso/isowhite.svg";
 import ButtonSignIn from "../ButtonSignIn/ButtonSignIn";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -26,14 +28,22 @@ function Footer() {
       <div className="lg:w-full  border-white w-full h-full flex justify-center items-center  ">
         <div className="w-full p-5 flex flex-col justify-center items-center lg:items-start">
           <h5 className="text-secondary">Contacto</h5>
-          <span className="text-white">
+          <span className="text-white pt-2">
             +123 456 789
             <br />
             primhero@gmail.com
           </span>
-          <ul className="flex text-white">
-            <li>svg ig</li>
-            <li>svg fb</li>
+          <ul className="flex text-white gap-4 pt-2">
+            <li>
+              <Link href={"https://www.instagram.com/transporteprimhero/"}>
+                <Image src={instagram} alt="logo" width={20} height={20} />
+              </Link>
+            </li>
+            <li>
+              <Link href={"https://m.facebook.com/people/Transporte-Primhero/100084061013848/"}>
+                <Image src={facebook} alt="logo" width={20} height={20} />
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
@@ -41,16 +51,16 @@ function Footer() {
       <div className="lg:w-full  flex justify-center items-center align-middle  w-full h-full sm:pl-10 md:pl-24 lg:pl-0  xl:pl-0 border-l-2 ">
         <ul className="text-secondary w-1/2 h-1/2 flex flex-col  justify-center items-start lg:text-sm ">
           <li>
-            <a href="https:localhost:3000">INICIO</a>
+            <a href="/">INICIO</a>
           </li>
           <li>
-            <a href="https:localhost:3000/tracking">TRACKING</a>
+            <a href="/tracking">TRACKING</a>
           </li>
           <li>SERVICIOS</li>
           <li>NOSOTROS</li>
           <li>TUTORIALES</li>
           <li>CONTACTO</li>
-        </ul>{" "}
+        </ul>
       </div>
 
       <div className="lg:w-full  w-full h-full flex justify-center items-center  ">
