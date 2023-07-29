@@ -4,7 +4,7 @@ import pic from "../../assets/services/picEmployee.svg";
 
 export default function Services() {
   return (
-    <div className="flex flex-col md:flex-row w-full h-full md:h-[800px]  ">
+    <div className="flex flex-col md:flex-row w-full h-full md:h-[600px]  ">
       <div className="flex flex-col  w-screen md:w-1/2 overflow-x-hidden  h-[500px] md:h-[800px]  overflow-y-scroll sm:px-20 ">
         {services.map((service, index) => (
           <div
@@ -26,7 +26,13 @@ export default function Services() {
       </div>
       <aside className="md:w-1/2">
         <div className="w-full  ">
-          <Image src={pic} alt="pic" width={500} height={500} className="   object-cover w-full " />
+          <Image
+            src={pic}
+            alt="pic"
+            width={300}
+            height={300}
+            className="   object-cover object-center w-full "
+          />
         </div>
       </aside>
     </div>
