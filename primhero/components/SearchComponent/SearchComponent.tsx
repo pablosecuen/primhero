@@ -13,10 +13,10 @@ function SearchComponent() {
   const fetchSearchResults = () => {
     axios
       .get<SearchResult[]>("TU_ENDPOINT_DE_BUSQUEDA")
-      .then((response) => {
+      .then((response: any) => {
         setSearchResults(response.data);
       })
-      .catch((error) => {
+      .catch((error: any) => {
         console.error("Error al obtener los resultados de búsqueda:", error);
       });
   };

@@ -6,6 +6,9 @@ import { Toaster } from "sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: ExtendedMetadata = {
+  icons: {
+    icon: "/favicon.ico",
+  },
   title: "PrimHero Home",
   description: "Bienvenidos a PrimHero",
   canonical: { url: "https://primhero-pablosecuen.vercel.app" },

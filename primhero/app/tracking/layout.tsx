@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: ExtendedMetadata = {
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon.ico",
   },
   title: "PrimHero Tracking",
   description: "Bienvenidos a PrimHero Tracking",
