@@ -8,10 +8,10 @@ function NavnarMenuDesktop() {
       {" "}
       <ul className="flex gap-10  transition duration-500 ">
         <li className="my-2 hover:text-secondary transition duration-700 drop-shadow-xl shadow-black">
-          <Link href="http://localhost:3000/">Inicio</Link>
+          <Link href="/">Inicio</Link>
         </li>
         <li className="my-2 hover:text-secondary">
-          <Link href="http://localhost:3000/tracking">Tracking</Link>
+          <Link href="/tracking">Tracking</Link>
         </li>
         <li className="my-2 hover:text-secondary transition duration-700 drop-shadow-xl shadow-black">
           <Link href="#servicios" onClick={(e) => handleNavItemClick(e, "servicios")}>

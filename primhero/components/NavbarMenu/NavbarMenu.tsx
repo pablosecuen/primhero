@@ -39,10 +39,10 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ isOpen, toggleMenu }) => {
       >
         <ul className="flex flex-col">
           <li className="my-2 hover:text-secondary transition duration-500">
-            <a href="http://localhost:3000/">Inicio</a>
+            <a href="/">Inicio</a>
           </li>
           <li className="my-2 hover:text-secondary transition duration-500">
-            <a href="http://localhost:3000/tracking">Tracking</a>
+            <a href="/tracking">Tracking</a>
           </li>
           <li className="my-2 hover:text-secondary transition duration-500">
             <a href="#servicios" onClick={(e) => handleNavItemClick(e, "servicios")}>
