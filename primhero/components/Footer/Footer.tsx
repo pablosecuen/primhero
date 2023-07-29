@@ -35,12 +35,15 @@ function Footer() {
           </span>
           <ul className="flex text-white gap-4 pt-2">
             <li>
-              <Link href={"https://www.instagram.com/transporteprimhero/"}>
+              <Link href={"https://www.instagram.com/transporteprimhero/"} target="_blank">
                 <Image src={instagram} alt="logo" width={20} height={20} />
               </Link>
             </li>
             <li>
-              <Link href={"https://m.facebook.com/people/Transporte-Primhero/100084061013848/"}>
+              <Link
+                href={"https://m.facebook.com/people/Transporte-Primhero/100084061013848/"}
+                target="_blank"
+              >
                 <Image src={facebook} alt="logo" width={20} height={20} />
               </Link>
             </li>
