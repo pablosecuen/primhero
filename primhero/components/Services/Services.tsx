@@ -4,8 +4,8 @@ import pic from "../../assets/services/picEmployee.svg";
 
 export default function Services() {
   return (
-    <div className="flex flex-col md:flex-row w-full  ">
-      <div className="flex flex-col  w-screen md:w-1/2  h-[600px] sm:h-full sm:justify-center sm:items-center sm:align-middle overflow-y-scroll sm:px-20 ">
+    <div className="flex flex-col md:flex-row w-full h-full md:h-[800px]  ">
+      <div className="flex flex-col  w-screen md:w-1/2 overflow-x-hidden  h-[500px] md:h-[800px]  overflow-y-scroll sm:px-20 ">
         {services.map((service, index) => (
           <div
             className="w-screen  flex flex-col justify-center items-start align-middle py-4 "
@@ -19,7 +19,7 @@ export default function Services() {
               </div>
             </article>
             {index !== services.length - 1 && (
-              <hr className="w-10/12 mx-auto h-[2px] px-20 bg-white  rounded-full" />
+              <hr className="w-10/12 md:w-5/12 mx-auto md:mx-0 h-[2px] md:px-20 bg-white  rounded-full" />
             )}
           </div>
         ))}
