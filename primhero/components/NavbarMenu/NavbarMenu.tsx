@@ -28,7 +28,7 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ isOpen, toggleMenu }) => {
       <div
         className={`transition-all duration-500 ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        } fixed h-screen w-screen top-0 left-0 bg-black/20`}
+        } fixed h-screen mt-16 w-screen top-0 left-0 bg-black/20`}
         onClick={toggleMenu}
       ></div>
 
