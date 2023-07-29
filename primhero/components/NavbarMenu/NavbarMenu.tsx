@@ -33,7 +33,7 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ isOpen, toggleMenu }) => {
       ></div>
 
       <div
-        className={`transition-all duration-500 ${
+        className={`transition-all duration-1000 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } fixed top-12 right-0 w-[50%] h-screen bg-primary shadow-2xl p-4 mt-4`}
       >
