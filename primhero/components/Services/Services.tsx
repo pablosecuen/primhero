@@ -4,11 +4,11 @@ import pic from "../../assets/services/picEmployee.svg";
 
 export default function Services() {
   return (
-    <div className="flex flex-col md:flex-row w-full sm:h-[600px] ">
-      <div className="flex flex-col  w-full md:w-1/2 justify-center items-center align-middle overflow-y-scroll px-20 ">
+    <div className="flex flex-col md:flex-row w-full  ">
+      <div className="flex flex-col  w-screen md:w-1/2  h-[600px] sm:h-full sm:justify-center sm:items-center sm:align-middle overflow-y-scroll sm:px-20 ">
         {services.map((service, index) => (
           <div
-            className="w-full flex flex-col justify-center items-start align-middle py-4 "
+            className="w-screen  flex flex-col justify-center items-start align-middle py-4 "
             key={index}
           >
             <article className="  text-black flex gap-4 px-10  mt-8 mb-8">
