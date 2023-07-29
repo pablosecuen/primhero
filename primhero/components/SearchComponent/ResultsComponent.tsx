@@ -116,7 +116,7 @@ function ResultsComponent() {
           </ol>
         </section>
       </div>
-      <div className="p-10 text-black w-full flex flex-col sm:flex-row justify-center bg-white items-center gap-2">
+      <div className="p-10 md:pr-40 text-black w-full flex flex-col sm:flex-row justify-center bg-white items-center gap-2">
         <div className=" flex flex-col  text-gray-500 italic  justify-center items-start p-20  bg-white  h-96 sm:w-full sm:h-1/2 border-black/40 border border-dashed">
           <h5>
             Remitente: <strong>{examplePackage.sender}</strong>
