@@ -6,29 +6,29 @@ function NavnarMenuDesktop() {
   return (
     <div>
       {" "}
-      <ul className="flex gap-10  transition duration-500 ">
-        <li className="my-2 hover:text-secondary transition duration-700 drop-shadow-xl shadow-black">
+      <ul className="flex gap-10 text-white transition duration-500 ">
+        <li className="my-2 hover:text-secondary text-white transition duration-700 drop-shadow-xl shadow-black">
           <Link href="/">Inicio</Link>
         </li>
-        <li className="my-2 hover:text-secondary">
+        <li className="my-2 hover:text-secondary text-white transition duration-700 drop-shadow-xl shadow-black">
           <Link href="/tracking">Tracking</Link>
         </li>
-        <li className="my-2 hover:text-secondary transition duration-700 drop-shadow-xl shadow-black">
+        <li className="my-2 hover:text-secondary text-white transition duration-700 drop-shadow-xl shadow-black">
           <Link href="#servicios" onClick={(e) => handleNavItemClick(e, "servicios")}>
             Servicios
           </Link>
         </li>
-        <li className="my-2 hover:text-secondary transition duration-700 drop-shadow-xl shadow-black">
+        <li className="my-2 hover:text-secondary text-white transition duration-700 drop-shadow-xl shadow-black">
           <Link href="#nosotros" onClick={(e) => handleNavItemClick(e, "nosotros")}>
             Nosotros
           </Link>
         </li>
-        <li className="my-2 hover:text-secondary transition duration-700 drop-shadow-xl shadow-black">
+        <li className="my-2 hover:text-secondary text-white transition duration-700 drop-shadow-xl shadow-black">
           <Link href="#tutoriales" onClick={(e) => handleNavItemClick(e, "tutoriales")}>
             Tutoriales
           </Link>
         </li>
-        <li className="my-2 hover:text-secondary transition duration-700 drop-shadow-xl shadow-black">
+        <li className="my-2 hover:text-secondary text-white transition duration-700 drop-shadow-xl shadow-black">
           <Link href="#contacto" onClick={(e) => handleNavItemClick(e, "contacto")}>
             Contacto
           </Link>
