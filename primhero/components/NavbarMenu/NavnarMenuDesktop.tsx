@@ -4,7 +4,7 @@ import handleNavItemClick from "@component/utils/handleNavItemClick";
 
 function NavnarMenuDesktop() {
   return (
-    <div>
+    <div className="hidden sm:block">
       {" "}
       <ul className="flex gap-10 text-white transition duration-500 ">
         <li className="my-2 hover:text-secondary text-white transition duration-700 drop-shadow-xl shadow-black">
