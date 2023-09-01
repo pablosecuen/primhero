@@ -3,7 +3,6 @@ import { NavbarMenuProps } from "../../types/NavbarMenuProps";
 import Link from "next/link";
 import handleNavItemClick from "@component/utils/handleNavItemClick";
 import { useEffect, useState } from "react";
-import ButtonSignIn from "../ButtonSignIn/ButtonSignIn";
 import Modal from "../ModalLogin/ModalLogin";
 import Image from "next/image";
 import button from "../../assets/exit/BotonExit.svg";
