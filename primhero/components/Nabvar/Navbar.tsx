@@ -24,7 +24,10 @@ const Navbar: React.FC = () => {
           <UseAnimations animation={menu2} size={50} fillColor="#f9b400" strokeColor="#f9b400" />
         </button>
         <NavnarMenuDesktop />
-        <ButtonSignIn />
+        <div className="hidden sm:block">
+          {" "}
+          <ButtonSignIn />
+        </div>
       </div>
       <NavbarMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} />
     </>

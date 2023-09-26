@@ -107,8 +107,10 @@ function Footer() {
       </div>
 
       <div className="lg:w-full  w-full h-full flex justify-center items-center  ">
+        {" "}
         <ButtonSignIn />
       </div>
+
       <div className="lg:w-full  border-r-2 lg:border-r-0 col-span-1 flex flex-col justify-center items-center align-middle ">
         <Image src={iso} alt="logo" width={100} height={100} className="fill-white color-white" />
       </div>

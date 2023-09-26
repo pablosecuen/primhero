@@ -18,7 +18,7 @@ function ButtonSignIn() {
   console.log();
 
   return (
-    <div className="w-24 hidden sm:block">
+    <div className="w-24 sm:block">
       <Image src={button} alt="boton" width={150} height={150} onClick={handleButtonClick} />
       {isModalOpen && <Modal onClose={handleCloseModal} />}
     </div>

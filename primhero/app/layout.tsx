@@ -11,7 +11,8 @@ export const metadata: ExtendedMetadata = {
   },
   title: "PrimHero Home",
   description: "Bienvenidos a PrimHero",
-  canonical: { url: "https://primhero-pablosecuen.vercel.app" },
+  metadataBase: new URL("https://primhero-pablosecuen.vercel.app"),
+  canonical: { url: "/" },
   robots: "index, follow, max-snippet:150, max-image-preview:large",
   openGraph: {
     title: "Home",
