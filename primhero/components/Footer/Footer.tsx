@@ -107,7 +107,6 @@ function Footer() {
       </div>
 
       <div className="lg:w-full  w-full h-full flex justify-center items-center  ">
-        {" "}
         <ButtonSignIn />
       </div>
 
