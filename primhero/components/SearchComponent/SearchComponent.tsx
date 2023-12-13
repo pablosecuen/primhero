@@ -3,34 +3,44 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import box from "../../assets/box/box.svg";
 import Image from "next/image";
-import { SearchResult } from "@component/types/SearchResult";
+
 import ResultsComponent from "./ResultsComponent";
+import { SearchResult } from "@component/types/SearchResult";
 
 function SearchComponent() {
   const [showSearchResults, setShowSearchResults] = useState(false);
-  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+  const [searchResults, setSearchResults] = useState<SearchResult | null>(null);
+  const [trackingNumber, setTrackingNumber] = useState<number | null>(null);
 
-  const fetchSearchResults = () => {
+  const fetchSearchResults = (numeroSeguimiento: number) => {
+    const endpoint = `https://gamma.syloper.ar/primhero/api/tracking?nro_seguimiento=${numeroSeguimiento}`;
     axios
-      .get<SearchResult[]>("TU_ENDPOINT_DE_BUSQUEDA")
+      .get(endpoint)
       .then((response: any) => {
-        setSearchResults(response.data);
+        console.log(response.data.status_guia);
+        setSearchResults(response.data); // Guarda el objeto directamente en setSearchResult
       })
-      .catch((error: any) => {
+      .catch((error: Error) => {
         console.error("Error al obtener los resultados de búsqueda:", error);
       });
   };
 
   useEffect(() => {
-    // If showSearchResults is true, fetch the search results
-    if (showSearchResults) {
-      fetchSearchResults();
+    if (showSearchResults && trackingNumber !== null) {
+      fetchSearchResults(trackingNumber);
     }
-  }, [showSearchResults]);
+  }, [showSearchResults, trackingNumber]);
 
   const handleSearch = () => {
-    // When the "Buscar" button is clicked, show the search results
-    setShowSearchResults(true);
+    const trackingInput = document.getElementById("tracking") as HTMLInputElement;
+    const numeroSeguimiento = parseInt(trackingInput.value);
+
+    if (!isNaN(numeroSeguimiento)) {
+      setShowSearchResults(true);
+      setTrackingNumber(numeroSeguimiento);
+    } else {
+      console.error("Por favor ingresa un número de seguimiento válido");
+    }
   };
 
   return (
@@ -51,15 +61,21 @@ function SearchComponent() {
               placeholder="Buscar nro. de seguimiento"
             />
             <button
-              className=" px-8 cursor-pointer font-sans bg-secondary h-full "
-              onClick={handleSearch} // Manejador del evento para hacer la búsqueda
+              className=" px-8 cursor-pointer font-sans bg-secondary h-full hover:bg-yellow-500 transition duration-300 hover:brightness-110"
+              onClick={handleSearch}
             >
               Buscar
             </button>
           </div>
         </article>
       </div>
-      <ResultsComponent />
+      <div
+        className={`opacity-0 transition duration-500 ease-in-out overflow-hidden ${
+          searchResults ? "opacity-100 h-full" : " h-0"
+        }`}
+      >
+        {searchResults && <ResultsComponent searchResults={searchResults} />}
+      </div>
     </div>
   );
 }

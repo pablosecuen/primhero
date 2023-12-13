@@ -1,12 +1,14 @@
 "use client";
-import { FormData } from "@component/types/FormData";
-import Script from "next/script";
 import React, { useState, ChangeEvent, FormEvent } from "react";
-import emailjs from "emailjs-com";
-import { Toaster, toast } from "sonner";
-import { isValidName, isValidEmail, isSafeMessage } from "../../utils/formValidation";
 
-emailjs.init("nDkFXlv2Kmr_6HqHw");
+import { Toaster, toast } from "sonner";
+import {
+  isValidFirstName,
+  isValidLastName,
+  isValidEmail,
+  isSafeMessage,
+} from "../../utils/formValidation";
+import axios from "axios";
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -25,14 +27,26 @@ const ContactForm: React.FC = () => {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    // Realizamos las validaciones
-    if (!isValidName(formData.name)) {
-      toast.error("Por favor, ingrese un nombre válido (solo letras).");
+    // Verifica que todos los campos estén completos
+    if (
+      formData.name === "Nombre" ||
+      formData.lastName === "Apellido" ||
+      formData.email === "Correo electrónico" ||
+      formData.phone === "Teléfono" ||
+      formData.message === "Escribe tu mensaje aquí"
+    ) {
+      toast.error("Por favor, completa todos los campos.");
       return;
     }
 
-    if (!isValidName(formData.lastName)) {
-      toast.error("Por favor, ingrese un apellido válido (solo letras).");
+    // Realizamos las validaciones
+    if (!isValidFirstName(formData.name)) {
+      toast.error("Por favor, ingrese un nombre válido (solo hasta 20 letras).");
+      return;
+    }
+
+    if (!isValidLastName(formData.lastName)) {
+      toast.error("Por favor, ingrese un apellido válido (solo hasta 20 letras).");
       return;
     }
 
@@ -46,27 +60,27 @@ const ContactForm: React.FC = () => {
       return;
     }
 
-    // Configura los parámetros del correo electrónico
+    // Configuramos los parámetros del correo electrónico
     const emailParams = {
-      from_name: formData.name + " " + formData.lastName,
-      phone: formData.phone,
+      firstName: formData.name,
+      lastName: formData.lastName,
+      numberPhone: formData.phone,
       email: formData.email,
       message: formData.message,
     };
 
-    // Envía el correo electrónico utilizando EmailJS
-    await emailjs.send("service_5lq6prv", "template_cmf2vda", emailParams, "nDkFXlv2Kmr_6HqHw");
-    const promise = emailjs.send(
-      "service_5lq6prv",
-      "template_cmf2vda",
-      emailParams,
-      "nDkFXlv2Kmr_6HqHw"
+    // Envío de datos al backend
+    const response = await axios.post(
+      "https://gamma.syloper.ar/primhero/api/formContact",
+      emailParams
     );
-    toast.promise(promise, {
-      loading: "Enviando correo por favor aguarde...",
-      success: "Correo electrónico enviado con éxito.",
-      error: "Error al enviar el correo electrónico.",
-    });
+
+    // Verificamos la respuesta del servidor y muestra las alertas correspondientes
+    if (response.data.status === "success") {
+      toast.success("Solicitud procesada correctamente!");
+    } else {
+      toast.error("Error al procesar la solicitud.");
+    }
     setFormData({
       name: "Nombre",
       lastName: "Apellido",
