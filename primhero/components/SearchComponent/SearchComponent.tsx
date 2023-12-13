@@ -3,25 +3,27 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import box from "../../assets/box/box.svg";
 import Image from "next/image";
-
+import { Toaster, toast } from "sonner";
 import ResultsComponent from "./ResultsComponent";
 import { SearchResult } from "@component/types/SearchResult";
-
+import { useRouter, useSearchParams } from "next/navigation";
 function SearchComponent() {
+  const router = useRouter();
   const [showSearchResults, setShowSearchResults] = useState(false);
   const [searchResults, setSearchResults] = useState<SearchResult | null>(null);
   const [trackingNumber, setTrackingNumber] = useState<number | null>(null);
+  const [searchParams] = useSearchParams();
 
   const fetchSearchResults = (numeroSeguimiento: number) => {
     const endpoint = `https://gamma.syloper.ar/primhero/api/tracking?nro_seguimiento=${numeroSeguimiento}`;
     axios
       .get(endpoint)
       .then((response: any) => {
-        console.log(response.data.status_guia);
-        setSearchResults(response.data); // Guarda el objeto directamente en setSearchResult
+        setSearchResults(response.data);
+        toast.success("Resultados de búsqueda obtenidos correctamente");
       })
       .catch((error: Error) => {
-        console.error("Error al obtener los resultados de búsqueda:", error);
+        toast.error("Error al obtener los resultados de búsqueda: " + error.message);
       });
   };
 
@@ -31,6 +33,23 @@ function SearchComponent() {
     }
   }, [showSearchResults, trackingNumber]);
 
+  useEffect(() => {
+    if (searchParams) {
+      const params = Object.fromEntries(searchParams.entries()) as Record<string, string>;
+      const numeroSeguimiento = searchParams?.[1];
+
+      if (numeroSeguimiento !== undefined && numeroSeguimiento !== null) {
+        const parsedNumeroSeguimiento = parseInt(numeroSeguimiento, 10);
+
+        if (!isNaN(parsedNumeroSeguimiento)) {
+          setShowSearchResults(true);
+          setTrackingNumber(parsedNumeroSeguimiento);
+          fetchSearchResults(parsedNumeroSeguimiento);
+        }
+      }
+    }
+  }, []);
+
   const handleSearch = () => {
     const trackingInput = document.getElementById("tracking") as HTMLInputElement;
     const numeroSeguimiento = parseInt(trackingInput.value);
@@ -38,13 +57,15 @@ function SearchComponent() {
     if (!isNaN(numeroSeguimiento)) {
       setShowSearchResults(true);
       setTrackingNumber(numeroSeguimiento);
+      fetchSearchResults(numeroSeguimiento);
     } else {
-      console.error("Por favor ingresa un número de seguimiento válido");
+      toast.error("Por favor ingresa un número de seguimiento válido");
     }
   };
 
   return (
     <div className="overflow-x-hidden font-sans">
+      <Toaster position="top-center" richColors />
       <div className="bg-image2 h-screen w-full bg-cover bg-center text-center flex flex-col justify-center align-middle items-center gap-8">
         <h3 className="text-white text-center text-3xl  tracking-tight font-extrabold">TRACKING</h3>
         <h4 className="text-secondary font-bold">Realiza un seguimiento de tu envío</h4>

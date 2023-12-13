@@ -1,4 +1,5 @@
 import { SearchResult } from "@component/types/SearchResult";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -7,8 +8,9 @@ interface ResultsProps {
 }
 
 function ResultsComponent({ searchResults }: ResultsProps) {
-  console.log(searchResults?.status_guia);
-
+  const activeStatus = searchResults?.status_seguimientos.find((status) => status.active);
+  const src = activeStatus?.img || "";
+  const alt = activeStatus?.alt || "";
   return (
     <div className="flex flex-col sm:flex-row   w-screen h-full">
       <div className=" w-full bg-white flex justify-center">
@@ -43,6 +45,20 @@ function ResultsComponent({ searchResults }: ResultsProps) {
                         ?.info
                     }
                   </time>
+                )}
+              {searchResults?.status_seguimientos &&
+                searchResults.status_seguimientos.length > 0 &&
+                searchResults.status_seguimientos.find((status) => status.active) && (
+                  <Image
+                    src={
+                      searchResults.status_seguimientos.find((status) => status.active)?.img || ""
+                    }
+                    alt={
+                      searchResults.status_seguimientos.find((status) => status.active)?.alt || ""
+                    }
+                    width={50}
+                    height={50}
+                  />
                 )}
 
               <div className="mb-4">

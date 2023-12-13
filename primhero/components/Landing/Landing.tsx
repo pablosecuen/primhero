@@ -1,6 +1,21 @@
+"use client";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 function Landing() {
+  const router = useRouter();
+
+  const handleSearch = () => {
+    const trackingInput = document.getElementById("seguimiento") as HTMLInputElement;
+    const numeroSeguimiento = trackingInput.value;
+
+    if (numeroSeguimiento.trim() !== "") {
+      router.push(`/tracking?numeroSeguimiento=${numeroSeguimiento}`);
+    } else {
+      console.error("Por favor ingresa un número de seguimiento válido");
+    }
+  };
+
   return (
     <div className="w-screen h-screen text-xl -mb-24 sm:-mb-28 lg:-mb-28 md:-mb-28 xl:-mb-4 flex flex-col  justify-center items-start pl-12 md:pl-48 bg-image1 bg-cover bg-clip-border bg-no-repeat bg-center">
       {" "}
@@ -24,7 +39,9 @@ function Landing() {
             placeholder=" Buscar nro. de seguimiento"
             className="text-black text-xs w-3/4 pl-4 placeholder:text-black"
           ></input>
-          <button className="w-auto  m-auto cursor-pointer font-sans">Buscar</button>
+          <button onClick={handleSearch} className="w-auto  m-auto cursor-pointer font-sans">
+            Buscar
+          </button>
         </div>
       </div>
     </div>
