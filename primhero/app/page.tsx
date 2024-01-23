@@ -42,13 +42,13 @@ export default function Home() {
       </section>
 
       {/* seccion tutoriales */}
-      <section
+      {/*       <section
         className="w-full h-hull py-20 bg-black flex flex-col item-center align-middle justify-center"
         id="tutoriales"
       >
         <Tutorials />
       </section>
-
+ */}
       {/* secccion clientes */}
       <section className="w-full py-8 h-hull bg-[#ebebeb] flex flex-col md:flex item-center align-middle justify-center">
         {" "}
