@@ -29,7 +29,7 @@ function Landing() {
           Sea una encomienda o un conteneder, movelo <br /> desde la palma de tu mano
         </p>
       </h2>
-      {/* <div className="w-3/4 sm:w-80 md:pt-8 pt-4">
+      <div className="w-3/4 sm:w-80 md:pt-8 pt-4">
         <label htmlFor="seguimiento " className="text-white font-sans">
           ¿Realizaste un envío?
         </label>
@@ -43,7 +43,7 @@ function Landing() {
             Buscar
           </button>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

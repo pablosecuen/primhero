@@ -10,9 +10,9 @@ function NavnarMenuDesktop() {
         <li className="my-2 hover:text-secondary text-white transition duration-700 drop-shadow-xl shadow-black">
           <Link href="/">Inicio</Link>
         </li>
-        {/*  <li className="my-2 hover:text-secondary text-white transition duration-700 drop-shadow-xl shadow-black">
+        <li className="my-2 hover:text-secondary text-white transition duration-700 drop-shadow-xl shadow-black">
           <Link href="/tracking">Tracking</Link>
-        </li> */}
+        </li>
         <li className="my-2 hover:text-secondary text-white transition duration-700 drop-shadow-xl shadow-black">
           <Link href="#servicios" onClick={(e) => handleNavItemClick(e, "servicios")}>
             Servicios

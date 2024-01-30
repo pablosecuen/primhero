@@ -56,9 +56,9 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ isOpen, toggleMenu }) => {
           <li className="my-2 hover:text-secondary transition duration-500">
             <Link href="/">Inicio</Link>
           </li>
-          {/*          <li className="my-2 hover:text-secondary transition duration-500">
+          <li className="my-2 hover:text-secondary transition duration-500">
             <Link href="/tracking">Tracking</Link>
-          </li> */}
+          </li>
           <li className="my-2 hover:text-secondary transition duration-500">
             <Link href="#servicios" onClick={(e) => handleNavItemClick(e, "servicios")}>
               Servicios

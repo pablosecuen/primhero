@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
           <UseAnimations animation={menu2} size={50} fillColor="#f9b400" strokeColor="#f9b400" />
         </button>
         <NavnarMenuDesktop />
-        <div className="hidden sm:block opacity-0">
+        <div className=" ">
           {" "}
           <ButtonSignIn />{" "}
         </div>
