@@ -8,13 +8,14 @@ node_modules/
 
 # testing
 /coverage
-
+dist.zip
 # next.js
 /.next/
 /out/
 node_modules/
 /node_modules
 
+dist
 # production
 /build
 
