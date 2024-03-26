@@ -15,7 +15,7 @@ function SearchComponent() {
   const [searchParams] = useSearchParams();
 
   const fetchSearchResults = (numeroSeguimiento: number) => {
-    const endpoint = `https://gamma.syloper.ar/primhero/api/tracking?nro_seguimiento=${numeroSeguimiento}`;
+    const endpoint = `https://primhero.com.ar/api/tracking?nro_seguimiento=${numeroSeguimiento}`;
     axios
       .get(endpoint)
       .then((response: any) => {
@@ -48,7 +48,7 @@ function SearchComponent() {
         }
       }
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSearch = () => {
