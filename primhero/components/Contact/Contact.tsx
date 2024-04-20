@@ -71,7 +71,7 @@ const ContactForm: React.FC = () => {
 
     // Envío de datos al backend
     const response = await axios.post(
-      "https://gamma.syloper.ar/primhero/api/formContact",
+      "https://primhero.com.ar/primhero/api/formContact",
       emailParams
     );
 
