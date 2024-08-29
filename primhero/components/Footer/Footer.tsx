@@ -33,9 +33,9 @@ function Footer() {
         <div className="w-full p-5 flex flex-col justify-center items-center lg:items-start">
           <h5 className="text-secondary">Contacto</h5>
           <span className="text-white pt-2">
-            +123 456 789
+            +3476-670505
             <br />
-            primhero@gmail.com
+            gerencia.logistica@primhero.com.ar
           </span>
           <ul className="flex text-white gap-4 pt-2">
             <li>
